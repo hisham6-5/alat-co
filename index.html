@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>ALAT.CO | قطع غيار المعدات الثقيلة</title>
+<meta name="description" content="ألات - قطع غيار المعدات الثقيلة: حفارات، لودر، وأكثر. اسأل على واتساب أو شرفنا في المحل.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --yellow:#FEB501; --yellow-soft:#FFD34D;
+  --black:#070709; --ink:#0F0F13; --card:#131318;
+  --line:rgba(255,255,255,.09);
+  --text:#F6F4EF; --muted:#A9A69D; --wa:#25D366;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:'Tajawal',system-ui,sans-serif;background:var(--black);color:var(--text);line-height:1.7;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+h1,h2,h3{font-family:'Cairo','Tajawal',sans-serif}
+
+/* top bar */
+.topbar{position:absolute;top:0;right:0;left:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:14px 18px}
+.topbar .brand{display:flex;align-items:center;gap:9px;font-family:'Cairo';font-weight:900;font-size:15px;letter-spacing:.5px}
+.topbar .brand img{width:34px;height:26px;object-fit:contain;background:#fff;border-radius:8px;padding:2px 4px}
+.call-chip{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.08);border:1px solid var(--line);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:999px;padding:8px 14px;font-weight:800;font-size:13px;direction:ltr}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 22px 34px;isolation:isolate}
+.hero .bg{position:absolute;inset:0;z-index:-2;background:url('hero.jpg') center 38%/cover no-repeat}
+.hero .shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(to top, #070709 2%, rgba(7,7,9,.86) 30%, rgba(7,7,9,.42) 58%, rgba(7,7,9,.6) 100%)}
+.logo-card{width:164px;margin-bottom:20px;background:#fff;border-radius:22px;padding:12px 12px 8px;box-shadow:0 18px 48px rgba(254,181,1,.3), 0 4px 14px rgba(0,0,0,.5)}
+.kicker{display:inline-flex;align-items:center;gap:8px;color:var(--yellow);font-weight:800;font-size:13px;margin-bottom:10px}
+.kicker::before{content:"";width:22px;height:3px;border-radius:2px;background:var(--yellow)}
+.hero h1{font-size:31px;font-weight:900;line-height:1.42;margin-bottom:6px}
+.hero h1 .y{color:var(--yellow);text-shadow:0 2px 26px rgba(254,181,1,.35)}
+.hero .sub{color:#DBD8CF;font-size:15px;font-weight:500;margin-bottom:24px;max-width:330px}
+.cta-row{display:flex;flex-direction:column;gap:11px;margin-bottom:20px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;padding:16px 20px;border-radius:17px;font-weight:800;font-size:17px;transition:transform .12s ease}
+.btn:active{transform:scale(.97)}
+.btn-wa{background:linear-gradient(160deg,var(--yellow-soft),var(--yellow));color:#141200;box-shadow:0 12px 34px rgba(254,181,1,.38)}
+.btn-glass{background:rgba(255,255,255,.07);border:1px solid var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--text);direction:ltr;font-family:'Cairo';font-weight:800;letter-spacing:1px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.chip{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.06);border:1px solid var(--line);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:999px;padding:8px 13px;font-size:12.5px;font-weight:700;color:#E7E4DC}
+
+/* marquee */
+.marquee{background:var(--yellow);color:#141200;overflow:hidden;white-space:nowrap;padding:11px 0;transform:rotate(-1.2deg) scale(1.03);margin:4px 0 0;box-shadow:0 10px 30px rgba(254,181,1,.18)}
+.marquee .track{display:inline-block;animation:mq 22s linear infinite;font-family:'Cairo';font-weight:900;font-size:15px}
+.marquee span{margin:0 14px}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(50%)}}
+
+/* sections */
+section{padding:54px 22px}
+.sec-kicker{color:var(--yellow);font-weight:800;font-size:13px;display:flex;align-items:center;gap:8px;margin-bottom:8px;font-family:'Cairo'}
+.sec-kicker::before{content:"";width:22px;height:3px;border-radius:2px;background:var(--yellow)}
+.sec-title{font-size:25px;font-weight:900;margin-bottom:6px}
+.sec-sub{color:var(--muted);font-size:14px;font-weight:500;margin-bottom:26px}
+/* steps */
+.steps{display:flex;flex-direction:column;gap:12px}
+.step{display:flex;align-items:center;gap:15px;background:linear-gradient(160deg,#15151B,#0D0D10);border:1px solid var(--line);border-radius:20px;padding:18px 16px}
+.step .num{flex:none;width:48px;height:48px;border-radius:15px;background:rgba(254,181,1,.1);border:1px solid rgba(254,181,1,.4);display:flex;align-items:center;justify-content:center;font-family:'Cairo';font-weight:900;font-size:21px;color:var(--yellow)}
+.step h3{font-size:15.5px;font-weight:800;margin-bottom:2px}
+.step p{color:var(--muted);font-size:13px;font-weight:500;line-height:1.65}
+
+/* categories */
+.cats{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.cat{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:1/1.06;border:1px solid var(--line);background:var(--ink)}
+.cat img.ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cat .veil{position:absolute;inset:0;background:linear-gradient(to top, rgba(4,4,6,.93) 6%, rgba(4,4,6,.3) 50%, rgba(4,4,6,.12) 100%)}
+.cat h3{position:absolute;bottom:13px;right:14px;left:14px;font-size:15.5px;font-weight:800;display:flex;align-items:center;justify-content:space-between;gap:6px}
+.cat h3 .go{flex:none;width:26px;height:26px;border-radius:9px;background:var(--yellow);display:flex;align-items:center;justify-content:center}
+.cat.icon-card{background:radial-gradient(circle at 78% 18%, rgba(254,181,1,.22), transparent 55%),linear-gradient(155deg,#1B1A15,#0E0E10);display:flex;align-items:center;justify-content:center}
+.cat.icon-card .bolt{width:64px;height:64px;border-radius:19px;background:rgba(254,181,1,.12);border:1px solid rgba(254,181,1,.35);display:flex;align-items:center;justify-content:center}
+.cats-note{margin-top:16px;display:flex;align-items:center;gap:13px;background:rgba(254,181,1,.07);border:1px dashed rgba(254,181,1,.45);border-radius:18px;padding:16px;font-size:14px;font-weight:700;color:var(--yellow-soft);line-height:1.75}
+.cats-note svg{flex:none}
+
+/* features */
+.feats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.feat{background:linear-gradient(160deg,#15151B,#0D0D10);border:1px solid var(--line);border-radius:20px;padding:20px 15px}
+.feat .ic{width:46px;height:46px;border-radius:14px;background:rgba(254,181,1,.1);border:1px solid rgba(254,181,1,.32);display:flex;align-items:center;justify-content:center;margin-bottom:12px;box-shadow:0 6px 18px rgba(254,181,1,.1)}
+.feat h3{font-size:14.5px;font-weight:800;margin-bottom:3px}
+.feat p{color:var(--muted);font-size:12.5px;font-weight:500;line-height:1.7}
+
+/* cta band */
+.cta-band{position:relative;margin:0 16px;border-radius:26px;overflow:hidden;min-height:300px;display:flex;align-items:flex-end;border:1px solid rgba(254,181,1,.25)}
+.cta-band .bg{position:absolute;inset:0;background:url('cta.jpg') center 42%/cover no-repeat}
+.cta-band .veil{position:absolute;inset:0;background:linear-gradient(to top, rgba(4,4,6,.96) 12%, rgba(4,4,6,.35) 70%)}
+.cta-band .inner{position:relative;padding:24px 20px;width:100%}
+.cta-band h2{font-size:24px;font-weight:900;line-height:1.5;margin-bottom:4px}
+.cta-band h2 .y{color:var(--yellow)}
+.cta-band p{color:#D9D6CE;font-size:13.5px;font-weight:500;margin-bottom:18px}
+
+/* location */
+.loc-card{background:linear-gradient(160deg,#15151B,#0D0D10);border:1px solid var(--line);border-radius:24px;padding:26px 20px;text-align:center}
+.pin-wrap{width:62px;height:62px;margin:0 auto 14px;border-radius:19px;background:rgba(254,181,1,.1);border:1px solid rgba(254,181,1,.35);display:flex;align-items:center;justify-content:center}
+.loc-card .addr{font-family:'Cairo';font-size:17.5px;font-weight:800;margin-bottom:4px}
+.loc-card .addr2{color:var(--muted);font-size:14px;font-weight:500;margin-bottom:20px}
+.btn-map{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.06);border:1px solid var(--line);padding:13px 24px;border-radius:15px;font-weight:800;font-size:15px}
+
+/* footer + fab */
+footer{padding:36px 22px 116px;text-align:center;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer .f-name{font-family:'Cairo';color:var(--yellow);font-weight:900;letter-spacing:1.5px;font-size:16px}
+footer .f-tag{font-size:11px;letter-spacing:2.5px;color:#6E6C66;margin:2px 0 8px}
+footer .f-phone{direction:ltr;display:inline-block;font-weight:800;color:var(--text);font-size:14px}
+.fab{position:fixed;bottom:18px;left:18px;z-index:50;width:58px;height:58px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(37,211,102,.5)}
+.fab:active{transform:scale(.94)}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="bg"></div>
+  <div class="shade"></div>
+  <div class="topbar">
+    <div class="brand"><img src="logo.png" alt="ALAT.CO"> ALAT.CO</div>
+    <a class="call-chip" href="tel:+201032266559">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FEB501" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      0103 226 6559
+    </a>
+  </div>
+  <div class="logo-card"><img src="logo.png" alt="ALAT.CO - Heavy Equipment Spare Parts"></div>
+  <div class="kicker">ألات — ALAT.CO</div>
+  <h1>قطع غيار معداتك الثقيلة<br><span class="y">اللي بتدور عليها، عندنا</span></h1>
+  <div class="sub">حفارات • لودر • معدات ثقيلة — قطع أصلية ومضمونة، وتجهيز فوري من المحل</div>
+  <div class="cta-row">
+    <a class="btn btn-wa" href="https://wa.me/201032266559?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C+%D8%A3%D9%86%D8%A7+%D9%83%D9%84%D9%85%D8%AA%D9%83%D9%85+%D9%85%D9%86+%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9+%D9%88%D8%B9%D8%A7%D9%8A%D8%B2+%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1+%D8%B9%D9%86+%D9%82%D8%B7%D8%B9%D8%A9+%D8%BA%D9%8A%D8%A7%D8%B1" target="_blank" rel="noopener">
+      <svg width="23" height="23" viewBox="0 0 24 24" fill="#141200"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23m4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.73-.66-1.23-1.47-1.38-1.72-.14-.24-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.6.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3z"/></svg>
+      كلمنا واتساب
+    </a>
+    <a class="btn btn-glass" href="tel:+201032266559">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FEB501" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      0103 226 6559
+    </a>
+  </div>
+  <div class="chips">
+    <span class="chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FEB501" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> أصلي ومضمون</span>
+    <span class="chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FEB501" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> تجهيز سريع</span>
+    <span class="chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FEB501" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.83z"/><circle cx="7" cy="7" r="1.2" fill="#FEB501" stroke="none"/></svg> أسعار منافسة</span>
+  </div>
+</header>
+
+<div class="marquee"><div class="track">
+  <span>قطع غيار أصلية</span>✦<span>تجهيز فوري</span>✦<span>ضمان على القطع</span>✦<span>أسعار منافسة</span>✦<span>حفارات ولودر ومعدات ثقيلة</span>✦
+  <span>قطع غيار أصلية</span>✦<span>تجهيز فوري</span>✦<span>ضمان على القطع</span>✦<span>أسعار منافسة</span>✦<span>حفارات ولودر ومعدات ثقيلة</span>✦
+</div></div>
+
+<section id="how">
+  <div class="sec-kicker">٠١ / إزاي تطلب</div>
+  <div class="sec-title">ثلاث خطوات وخلاص</div>
+  <div class="sec-sub">من غير ما تلف وتدور — كل حاجة على الواتساب</div>
+  <div class="steps">
+    <div class="step">
+      <div class="num">١</div>
+      <div><h3>ابعت صورة القطعة أو رقمها</h3><p>صور القطعة أو اكتب رقمها على واتساب، ولو مش متأكد قولنا موديل المعدة</p></div>
+    </div>
+    <div class="step">
+      <div class="num">٢</div>
+      <div><h3>نرد عليك بالتوفر والسعر</h3><p>نشيك على المخزون ونبعتلك السعر والتفاصيل في نفس اليوم</p></div>
+    </div>
+    <div class="step">
+      <div class="num">٣</div>
+      <div><h3>استلم من المحل</h3><p>القطعة تكون جاهزة تستلمها من المحل في مدينة السلام</p></div>
+    </div>
+  </div>
+</section>
+<section id="cats" style="padding-top:6px">
+  <div class="sec-kicker">٠٢ / الأصناف</div>
+  <div class="sec-title">كل اللي معدتك محتاجاه</div>
+  <div class="sec-sub">اختار الصنف وابعتلنا على واتساب، وهنرد عليك بالتوفر والسعر</div>
+  <div class="cats">
+    <a class="cat" href="https://wa.me/201032266559?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C+%D8%A3%D9%86%D8%A7+%D9%83%D9%84%D9%85%D8%AA%D9%83%D9%85+%D9%85%D9%86+%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9+%D9%88%D8%B9%D8%A7%D9%8A%D8%B2+%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1+%D8%B9%D9%86+%D9%82%D8%B7%D8%B9%D8%A9+%D8%BA%D9%8A%D8%A7%D8%B1" target="_blank" rel="noopener">
+      <img class="ph" src="cat_filters.jpg" alt="فلاتر وزيوت"><div class="veil"></div>
+      <h3>فلاتر وزيوت <span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#141200" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></span></h3>
+    </a>
+    <a class="cat" href="https://wa.me/201032266559?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C+%D8%A3%D9%86%D8%A7+%D9%83%D9%84%D9%85%D8%AA%D9%83%D9%85+%D9%85%D9%86+%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9+%D9%88%D8%B9%D8%A7%D9%8A%D8%B2+%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1+%D8%B9%D9%86+%D9%82%D8%B7%D8%B9%D8%A9+%D8%BA%D9%8A%D8%A7%D8%B1" target="_blank" rel="noopener">
+      <img class="ph" src="cat_engine.jpg" alt="قطع محركات"><div class="veil"></div>
+      <h3>قطع محركات <span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#141200" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></span></h3>
+    </a>
+    <a class="cat" href="https://wa.me/201032266559?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C+%D8%A3%D9%86%D8%A7+%D9%83%D9%84%D9%85%D8%AA%D9%83%D9%85+%D9%85%D9%86+%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9+%D9%88%D8%B9%D8%A7%D9%8A%D8%B2+%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1+%D8%B9%D9%86+%D9%82%D8%B7%D8%B9%D8%A9+%D8%BA%D9%8A%D8%A7%D8%B1" target="_blank" rel="noopener">
+      <img class="ph" src="cat_hydro.jpg" alt="هيدروليك"><div class="veil"></div>
+      <h3>هيدروليك <span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#141200" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></span></h3>
+    </a>
+    <a class="cat" href="https://wa.me/201032266559?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C+%D8%A3%D9%86%D8%A7+%D9%83%D9%84%D9%85%D8%AA%D9%83%D9%85+%D9%85%D9%86+%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9+%D9%88%D8%B9%D8%A7%D9%8A%D8%B2+%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1+%D8%B9%D9%86+%D9%82%D8%B7%D8%B9%D8%A9+%D8%BA%D9%8A%D8%A7%D8%B1" target="_blank" rel="noopener">
+      <img class="ph" src="cat_gears.jpg" alt="جنازير وقطع حركة"><div class="veil"></div>
+      <h3>جنازير وقطع حركة <span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#141200" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></span></h3>
+    </a>
+    <a class="cat" href="https://wa.me/201032266559?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C+%D8%A3%D9%86%D8%A7+%D9%83%D9%84%D9%85%D8%AA%D9%83%D9%85+%D9%85%D9%86+%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9+%D9%88%D8%B9%D8%A7%D9%8A%D8%B2+%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1+%D8%B9%D9%86+%D9%82%D8%B7%D8%B9%D8%A9+%D8%BA%D9%8A%D8%A7%D8%B1" target="_blank" rel="noopener">
+      <img class="ph" src="cat_hoses.jpg" alt="سيور وخراطيم"><div class="veil"></div>
+      <h3>سيور وخراطيم <span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#141200" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></span></h3>
+    </a>
+    <a class="cat icon-card" href="https://wa.me/201032266559?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C+%D8%A3%D9%86%D8%A7+%D9%83%D9%84%D9%85%D8%AA%D9%83%D9%85+%D9%85%D9%86+%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9+%D9%88%D8%B9%D8%A7%D9%8A%D8%B2+%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1+%D8%B9%D9%86+%D9%82%D8%B7%D8%B9%D8%A9+%D8%BA%D9%8A%D8%A7%D8%B1" target="_blank" rel="noopener">
+      <div class="bolt"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#FEB501" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13.5H11L10 22l8.5-11.5H13L13 2z"/></svg></div>
+      <h3>كهرباء <span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#141200" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></span></h3>
+    </a>
+  </div>
+  <div class="cats-note">
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#FEB501" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.4"/><path d="M8.5 6l1.2-2h4.6l1.2 2"/></svg>
+    مش لاقي اللي بتدور عليه؟ ابعتلنا صورة القطعة أو رقمها على واتساب وهنجهزهالك
+  </div>
+</section>
+
+<section id="why" style="padding-top:6px">
+  <div class="sec-kicker">٠٣ / ليه ألات</div>
+  <div class="sec-title">شغلنا يتكلم عنا</div>
+  <div class="sec-sub">&nbsp;</div>
+  <div class="feats">
+    <div class="feat">
+      <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FEB501" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.2 2.2M16.9 16.9l2.2 2.2M19.1 4.9l-2.2 2.2M7.1 16.9l-2.2 2.2"/></svg></div>
+      <h3>متخصصين معدات ثقيلة</h3><p>شغلنا كله حفارات ولودر، فعارفين القطعة الصح من أول مرة</p>
+    </div>
+    <div class="feat">
+      <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FEB501" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3z"/></svg></div>
+      <h3>أصلي ومضمون</h3><p>قطع أصلية بضمان، مش بدائل تبوظ معاك بعد أسبوع</p>
+    </div>
+    <div class="feat">
+      <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FEB501" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+      <h3>تجهيز فوري</h3><p>الموجود يتسلم في نفس اليوم، والمطلوب نوفره في أسرع وقت</p>
+    </div>
+    <div class="feat">
+      <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FEB501" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+      <h3>رد سريع على واتساب</h3><p>ابعت صورة القطعة في أي وقت وهنرد عليك بالتفاصيل</p>
+    </div>
+  </div>
+</section>
+<div class="cta-band">
+  <div class="bg"></div>
+  <div class="veil"></div>
+  <div class="inner">
+    <h2>محتاج قطعة <span class="y">النهارده؟</span></h2>
+    <p>ابعتلنا دلوقتي على واتساب وهنجاوبك على طول</p>
+    <a class="btn btn-wa" href="https://wa.me/201032266559?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C+%D8%A3%D9%86%D8%A7+%D9%83%D9%84%D9%85%D8%AA%D9%83%D9%85+%D9%85%D9%86+%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9+%D9%88%D8%B9%D8%A7%D9%8A%D8%B2+%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1+%D8%B9%D9%86+%D9%82%D8%B7%D8%B9%D8%A9+%D8%BA%D9%8A%D8%A7%D8%B1" target="_blank" rel="noopener" style="max-width:330px">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="#141200"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23m4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.73-.66-1.23-1.47-1.38-1.72-.14-.24-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.6.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3z"/></svg>
+      اطلب على واتساب
+    </a>
+  </div>
+</div>
+
+<section id="loc">
+  <div class="sec-kicker">٠٤ / مكان المحل</div>
+  <div class="sec-title">شرفنا في أي وقت</div>
+  <div class="sec-sub">&nbsp;</div>
+  <div class="loc-card">
+    <div class="pin-wrap">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#FEB501" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    </div>
+    <div class="addr">القاهرة — مدينة السلام — شارع الترولي</div>
+    <div class="addr2">بجوار مدرسة النصر الخاصة</div>
+    <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=%D8%B4%D8%A7%D8%B1%D8%B9%20%D8%A7%D9%84%D8%AA%D8%B1%D9%88%D9%84%D9%8A%D8%8C%20%D9%85%D8%AF%D9%8A%D9%86%D8%A9%20%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FEB501" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+      افتح على خرائط جوجل
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="f-name">ALAT.CO</div>
+  <div class="f-tag">HEAVY EQUIPMENT SPARE PARTS</div>
+  <div class="f-phone">0103 226 6559</div>
+</footer>
+
+<a class="fab" href="https://wa.me/201032266559?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C+%D8%A3%D9%86%D8%A7+%D9%83%D9%84%D9%85%D8%AA%D9%83%D9%85+%D9%85%D9%86+%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9+%D9%88%D8%B9%D8%A7%D9%8A%D8%B2+%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1+%D8%B9%D9%86+%D9%82%D8%B7%D8%B9%D8%A9+%D8%BA%D9%8A%D8%A7%D8%B1" target="_blank" rel="noopener" aria-label="واتساب">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23m4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.73-.66-1.23-1.47-1.38-1.72-.14-.24-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.6.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3z"/></svg>
+</a>
+
+</body>
+</html>
